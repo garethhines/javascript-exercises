@@ -1,6 +1,11 @@
 const repeatString = function(string, repeats) {
-    let sentence = string; 
-    for (let i = 1 ; i < repeats ; i++ ) {
+    let sentence = '';
+
+    if (repeats < 0){
+        sentence = 'ERROR';
+    };
+
+    for (let i = 0 ; i < repeats ; i++ ) {
         sentence += string;
     }
     return sentence;
